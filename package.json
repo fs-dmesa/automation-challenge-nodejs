@@ -1,0 +1,13 @@
+{
+  "name": "automation-challenge-nodejs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FastSpring SDET technical interview scaffold (Node.js/TypeScript, Playwright)",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "typescript": "^5.5.4"
+  }
+}
