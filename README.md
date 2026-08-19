@@ -30,11 +30,9 @@ npx playwright show-report
 
 ## Traces
 
-`playwright.config.ts` sets `trace: 'retain-on-failure'` — every test records a
-trace, but it's only kept when the test doesn't pass (passing traces are
-discarded automatically). A failing test writes to
-`test-results/<test-name>/trace.zip`, and the HTML report opens it inline —
-`npx playwright show-report` is usually all you need. To view a trace file
+`playwright.config.ts` sets `trace: 'on'` — every test writes a trace, pass
+or fail, to `test-results/<test-name>/trace.zip`, and the HTML report opens
+it inline — `npx playwright show-report` is usually all you need. To view a trace file
 directly: `npx playwright show-trace <path>`.
 
 ## Layout

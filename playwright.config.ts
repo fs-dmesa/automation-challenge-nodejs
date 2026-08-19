@@ -9,6 +9,7 @@ export default defineConfig({
     reporter: [['list'], ['html', { open: 'never' }]],
     use: {
         userAgent: DESKTOP_CHROME_USER_AGENT,
-        trace: 'retain-on-failure',
+        // 'on' keeps a trace for every test, pass or fail.
+        trace: 'on',
     },
 });
