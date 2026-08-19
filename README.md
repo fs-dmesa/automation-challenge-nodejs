@@ -20,6 +20,14 @@ required) and checks that a product title renders. It should pass before your
 interview starts; if it doesn't, that's an environment problem worth chasing
 down ahead of time rather than during the session.
 
+## Test report
+
+Playwright writes an HTML report automatically. View it with:
+
+```
+npx playwright show-report
+```
+
 ## Layout
 
 - `src/pages` — page objects
