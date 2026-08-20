@@ -11,29 +11,29 @@ environment only — the actual challenge is given during your interview session
 
 ```
 npm install
-npx playwright install chromium   # once per machine
-npm test                          # runs the smoke test
+npm test
 ```
 
-The smoke test opens the target storefront (Test Mode — no login or account
-required) and checks that a product title renders. It should pass before your
-interview starts; if it doesn't, that's an environment problem worth chasing
-down ahead of time rather than during the session.
+This installs Chromium the first time, then runs the smoke test. It should
+pass before your interview starts — if it doesn't, let us know ahead of time
+rather than during the session.
 
-## Test report
+## Headed vs headless
 
-Playwright writes an HTML report automatically. View it with:
+Tests run headless by default. To watch the browser instead:
+
+```
+npx playwright test --headed
+```
+
+## Report
 
 ```
 npx playwright show-report
 ```
 
-## Traces
-
-`playwright.config.ts` sets `trace: 'on'` — every test writes a trace, pass
-or fail, to `test-results/<test-name>/trace.zip`, and the HTML report opens
-it inline — `npx playwright show-report` is usually all you need. To view a trace file
-directly: `npx playwright show-trace <path>`.
+Shows the full test result, with each test's Playwright trace viewable
+inline — pass or fail.
 
 ## Layout
 
